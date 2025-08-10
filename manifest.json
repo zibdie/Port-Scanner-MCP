@@ -1,7 +1,7 @@
 {
   "dxt_version": "1.0.0",
   "name": "@zibdie/port-scanner-mcp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "MCP server for network port scanning using nmap",
   "author": {
     "name": "Nour Zibdie",
