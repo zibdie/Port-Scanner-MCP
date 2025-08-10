@@ -1,6 +1,8 @@
 # Port Scanner MCP Server
 
-An MCP (Model Context Protocol) server that provides network port scanning capabilities using nmap. This server is designed for defensive security purposes, network discovery, and security assessment.
+An MCP (Model Context Protocol) server that provides network port scanning capabilities using nmap.
+
+This is very useful when chained with other MCP Tools. For example, needing to SSH into all your servers with a specific criteria to run some tests using Claude
 
 ## Features
 
@@ -255,9 +257,9 @@ If using the MCP server programmatically:
 
 This tool is intended for defensive security purposes only:
 - Network security assessment
-- Vulnerability discovery on owned systems
 - Network inventory and monitoring
 - Penetration testing with proper authorization
+- Device Discovery
 
 Always ensure you have proper authorization before scanning networks or systems you do not own.
 
