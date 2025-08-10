@@ -26,6 +26,21 @@ jobs:
       - name: Build project
         run: npm run build
         
+      - name: Install DXT CLI
+        run: npm install -g @anthropic-ai/dxt
+        
+      - name: Create DXT package
+        run: |
+          dxt pack
+          COMMIT_HASH=$(echo $GITHUB_SHA | cut -c1-7)
+          mv Port-Scanner-MCP.dxt "zibdie-port-scanner-mcp-${COMMIT_HASH}.zip"
+        
+      - name: Upload DXT artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dxt-package
+          path: "zibdie-port-scanner-mcp-*.zip"
+        
       - name: Run tests (if available)
         run: npm test --if-present
         

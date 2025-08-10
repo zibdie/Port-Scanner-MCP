@@ -113,3 +113,4 @@ Thumbs.db
 
 # Test files
 test-mcp.js
+*.dxt

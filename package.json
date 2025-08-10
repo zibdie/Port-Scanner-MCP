@@ -26,7 +26,7 @@
     "url": "https://github.com/zibdie/Port-Scanner-MCP/issues"
   },
   "homepage": "https://github.com/zibdie/Port-Scanner-MCP#readme",
-  "author": "zibdie",
+  "author": "https://github.com/zibdie",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
