@@ -1,0 +1,41 @@
+{
+  "name": "@zibdie/port-scanner-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for network port scanning using nmap",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "@zibdie/port-scanner-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "node dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "server", "port", "scanner", "nmap", "network", "security", "model-context-protocol"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zibdie/Port-Scanner-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zibdie/Port-Scanner-MCP/issues"
+  },
+  "homepage": "https://github.com/zibdie/Port-Scanner-MCP#readme",
+  "author": "zibdie",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^24.0.0"
+  }
+}
