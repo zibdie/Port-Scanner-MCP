@@ -1,11 +1,11 @@
 {
   "name": "@zibdie/port-scanner-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for network port scanning using nmap",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "@zibdie/port-scanner-mcp": "dist/index.js"
+    "port-scanner-mcp": "dist/index.js"
   },
   "files": [
     "dist/**/*",
