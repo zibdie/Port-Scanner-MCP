@@ -11,6 +11,37 @@ An MCP (Model Context Protocol) server that provides network port scanning capab
 - **JSON Output**: All results returned in structured JSON format
 - **No Root Required**: Uses TCP connect scans that don't require elevated privileges
 
+## Example Conversation (with Claude CLI)
+
+```
+> Can you find all ports open on port 22?
+
+⏺ I'll help you scan for hosts with port 22 open. Let me use the port scanner MCP
+  tool to check your local network for SSH services.
+
+⏺ port-scanner - network_discovery (MCP)(network: "192.168.1.0/24")
+  ⎿  [                                    
+       {
+         "host": "example.com (192.168.1.1)",
+     … +34 lines (ctrl+r to expand)
+
+⏺ Now let me scan these discovered hosts specifically for port 22:
+
+⏺ port-scanner - scan_ports (MCP)(targets:
+                                 ["192.168.1.1","192.168.1.2","192.168.1.4","192.168.
+                                 1.5","192.168.1.7","192.168.1.8","192.168.1.9"],
+                                 ports: [22], service_detection: true)
+  ⎿  [                                    
+       {
+         "host": "example.com (192.168.1.1)",
+     … +73 lines (ctrl+r to expand)
+
+⏺ Found 2 hosts with port 22 (SSH) open:
+
+  - 192.168.1.7 - OpenSSH 9.2p1 Debian 2+deb12u5
+  - 192.168.1.8 - OpenSSH 9.2p1 Debian 2+deb12u5
+```
+
 ## Default Ports
 
 The server scans these ports by default if no custom ports are specified:
